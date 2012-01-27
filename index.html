@@ -1,82 +1,94 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <meta charset='utf-8'>
+  
+	<title>SmoothAnchors - Animated scrolling for internal anchor links</title>
 
-  <title>alextrob/SmoothAnchors @ GitHub</title>
+	<style type="text/css">
+		html {
+			background: #003b75;
+		}
+		body {
+			font-family: helvetica, arial, sans-serif;
+			width: 600px;
+			padding: 10px;
+			margin: 30px auto;
+			background: white;
+		}
+	</style>
 
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #e00015;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #ffffff;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #1fffea; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #1fffea; }
-    h3 { text-align: center; color: #1fffea; }
-    a { color: #1fffea; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://raw.github.com/alextrob/SmoothAnchors/master/SmoothAnchors.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$().SmoothAnchors();
+		});
+	</script>
 </head>
-
 <body>
+
   <a href="https://github.com/alextrob/SmoothAnchors"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
 
-  <div id="container">
+<div>
 
-    <div class="download">
-      <a href="https://github.com/alextrob/SmoothAnchors/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/alextrob/SmoothAnchors/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
-    </div>
+<h1>SmoothAnchors</h1>
+<h2>Animated scrolling for internal anchor links</h2>
 
-    <h1><a href="https://github.com/alextrob/SmoothAnchors">SmoothAnchors</a>
-      <span class="small">by <a href="https://github.com/alextrob">alextrob</a></span></h1>
+<ul>
+	<li><a href="#how-to-use">How to use it</li>
+	<li><a href="#part1">Part 1</li>
+	<li><a href="#part2">Part 2</li>
+	<li><a href="#part3">Part 3</li>
+	<li><a href="#nowhere">Nowhere on this page</a> (no JS errors or anything)</li>
+	<li><a href="http://twitter.com/#!/alextrob">Me on Twitter</a> (links with hashes in them work fine)</li>
+	<li><a href="http://en.wikipedia.org/wiki/Jquery#Features">External link with a hash on the end</a></li>
+</ul>
 
-    <div class="description">
-      A jQuery plugin to make internal anchor links scroll smoothly.
-    </div>
+<h3 id="how-to-use">How to use it</h3>
 
-    
+<p><a href="#">Back to top</a></p>
 
-    
+<p>Just include the jQuery library and SmoothAnchors.js, then add <code>$().SmoothAnchors();</code> to your <code>$(document).ready()</code> function.
 
-    
+<pre>&lt;script&nbsp;type=&quot;text/javascript&quot;&nbsp;src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;<br/>&lt;script&nbsp;type=&quot;text/javascript&quot;&nbsp;src=&quot;SmoothAnchors.js&quot;&gt;&lt;/script&gt;<br/>&lt;script&nbsp;type=&quot;text/javascript&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;$(document).ready(function()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$().SmoothAnchors();<br/>&nbsp;&nbsp;&nbsp;&nbsp;});<br/>&lt;/script&gt;</pre>
 
-    
 
-    
+<h3><a name="part1">Part 1</a></h3>
 
-    
+<p><a href="#">Back to top</a></p>
 
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/alextrob/SmoothAnchors/zipball/master">zip</a> or
-      <a href="https://github.com/alextrob/SmoothAnchors/tarball/master">tar formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/alextrob/SmoothAnchors</pre>
-    </p>
+<p><strong>Part 1 has a name attribute specified, but no ID.</strong></p>
 
-    <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/alextrob/SmoothAnchors">alextrob/SmoothAnchors</a>
-    </div>
+<p>In libero tortor, accumsan et vestibulum a, tincidunt a est. Nam lacus mi, consequat eget imperdiet et, interdum ac tortor. Proin venenatis commodo metus nec aliquam. Suspendisse potenti. Aliquam erat volutpat. Nam imperdiet malesuada velit sed fringilla. Quisque odio dui, semper at ullamcorper eget, cursus a enim. Donec vel rhoncus lorem. Duis vitae lorem sit amet purus ornare varius ut a eros. Donec ullamcorper, enim ac volutpat egestas, purus mi semper metus, id ornare magna ipsum vel mauris. Morbi at mi in leo lobortis cursus. Morbi varius consequat nisi, sit amet cursus massa sagittis sed. Fusce justo massa, feugiat vitae varius vitae, cursus vel ipsum. Nam placerat convallis neque at faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 
-  </div>
+<p>Nulla facilisi. Nulla condimentum augue lectus. Cras luctus ornare ante. Nunc malesuada sodales pharetra. Aliquam a mi in tortor tincidunt iaculis. Nam fermentum justo et ipsum auctor porttitor. Donec vestibulum, ante id commodo faucibus, turpis justo fermentum augue, eget sollicitudin ante elit ac eros. Sed mollis, metus sed dapibus luctus, diam felis vehicula quam, eget dapibus leo risus vitae leo. Curabitur sed justo non nunc molestie aliquet vel a dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum facilisis tellus ac elit dignissim tincidunt. Nullam sit amet eros ut risus venenatis vestibulum eget non enim. Nulla tempor blandit ante a pretium. Sed nisl sapien, tincidunt ut vehicula quis, ultrices at urna. Cras id massa dui, at placerat augue. Ut accumsan eros at nunc accumsan pretium.</p>
+
+<p>Donec id scelerisque purus. Quisque eget odio erat. Pellentesque faucibus, erat vitae ultricies viverra, sem nulla pharetra nisl, eu auctor eros nunc sit amet tellus. Aliquam erat volutpat. In placerat, mi eget gravida lacinia, dolor tortor mollis nibh, in fringilla arcu nulla et tortor. Proin ultrices tincidunt tempus. Duis pellentesque dui at lectus convallis semper. Integer egestas, ligula vitae ultricies laoreet, sapien tortor molestie arcu, id tristique neque lacus et lacus. Vestibulum pretium bibendum enim in laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam nec turpis mi, hendrerit cursus dui. Cras nec leo tellus.</p>
+
+<h3 id="part2" name="part2">Part 2</h3>
+
+<p><a href="#">Back to top</a></p>
+
+<p><strong>Part 2 has both an ID and a name specified.</strong></p>
+
+<p>Quisque at nisl at eros luctus sollicitudin adipiscing et lorem. Vestibulum dui dolor, porta et lobortis id, hendrerit id nulla. Ut dapibus egestas nunc ac pulvinar. Vestibulum nisl diam, laoreet at condimentum et, faucibus et leo. Fusce sodales, lorem sit amet dictum consequat, eros velit laoreet nibh, ac porttitor tellus libero et eros. Integer varius, tortor vehicula aliquet luctus, tellus leo feugiat turpis, id dapibus lectus nibh quis arcu. Fusce pharetra nunc vel libero fermentum euismod. Maecenas condimentum, elit et venenatis suscipit, nisl tortor consequat neque, ac dapibus lacus ligula nec enim. Fusce ut metus a arcu commodo vulputate nec eu nunc. Nulla facilisi. Nunc rutrum lacinia rutrum. Duis rutrum nibh iaculis tellus bibendum nec volutpat quam volutpat. Curabitur feugiat lacinia urna, quis pellentesque neque mattis eget. Praesent ipsum eros, aliquam et elementum id, varius eu quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Quisque at nisl at eros luctus sollicitudin adipiscing et lorem. Vestibulum dui dolor, porta et lobortis id, hendrerit id nulla. Ut dapibus egestas nunc ac pulvinar. Vestibulum nisl diam, laoreet at condimentum et, faucibus et leo. Fusce sodales, lorem sit amet dictum consequat, eros velit laoreet nibh, ac porttitor tellus libero et eros. Integer varius, tortor vehicula aliquet luctus, tellus leo feugiat turpis, id dapibus lectus nibh quis arcu. Fusce pharetra nunc vel libero fermentum euismod. Maecenas condimentum, elit et venenatis suscipit, nisl tortor consequat neque, ac dapibus lacus ligula nec enim. Fusce ut metus a arcu commodo vulputate nec eu nunc. Nulla facilisi. Nunc rutrum lacinia rutrum. Duis rutrum nibh iaculis tellus bibendum nec volutpat quam volutpat. Curabitur feugiat lacinia urna, quis pellentesque neque mattis eget. Praesent ipsum eros, aliquam et elementum id, varius eu quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Quisque at nisl at eros luctus sollicitudin adipiscing et lorem. Vestibulum dui dolor, porta et lobortis id, hendrerit id nulla. Ut dapibus egestas nunc ac pulvinar. Vestibulum nisl diam, laoreet at condimentum et, faucibus et leo. Fusce sodales, lorem sit amet dictum consequat, eros velit laoreet nibh, ac porttitor tellus libero et eros. Integer varius, tortor vehicula aliquet luctus, tellus leo feugiat turpis, id dapibus lectus nibh quis arcu. Fusce pharetra nunc vel libero fermentum euismod. Maecenas condimentum, elit et venenatis suscipit, nisl tortor consequat neque, ac dapibus lacus ligula nec enim. Fusce ut metus a arcu commodo vulputate nec eu nunc. Nulla facilisi. Nunc rutrum lacinia rutrum. Duis rutrum nibh iaculis tellus bibendum nec volutpat quam volutpat. Curabitur feugiat lacinia urna, quis pellentesque neque mattis eget. Praesent ipsum eros, aliquam et elementum id, varius eu quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<h3 id="part3">Part 3</h3>
+
+<p><a href="#">Back to top</a></p>
+
+<p><strong>Part 3 only has an ID specified.</strong></p>
+
+<p>Quisque at nisl at eros luctus sollicitudin adipiscing et lorem. Vestibulum dui dolor, porta et lobortis id, hendrerit id nulla. Ut dapibus egestas nunc ac pulvinar. Vestibulum nisl diam, laoreet at condimentum et, faucibus et leo. Fusce sodales, lorem sit amet dictum consequat, eros velit laoreet nibh, ac porttitor tellus libero et eros. Integer varius, tortor vehicula aliquet luctus, tellus leo feugiat turpis, id dapibus lectus nibh quis arcu. Fusce pharetra nunc vel libero fermentum euismod. Maecenas condimentum, elit et venenatis suscipit, nisl tortor consequat neque, ac dapibus lacus ligula nec enim. Fusce ut metus a arcu commodo vulputate nec eu nunc. Nulla facilisi. Nunc rutrum lacinia rutrum. Duis rutrum nibh iaculis tellus bibendum nec volutpat quam volutpat. Curabitur feugiat lacinia urna, quis pellentesque neque mattis eget. Praesent ipsum eros, aliquam et elementum id, varius eu quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Quisque at nisl at eros luctus sollicitudin adipiscing et lorem. Vestibulum dui dolor, porta et lobortis id, hendrerit id nulla. Ut dapibus egestas nunc ac pulvinar. Vestibulum nisl diam, laoreet at condimentum et, faucibus et leo. Fusce sodales, lorem sit amet dictum consequat, eros velit laoreet nibh, ac porttitor tellus libero et eros. Integer varius, tortor vehicula aliquet luctus, tellus leo feugiat turpis, id dapibus lectus nibh quis arcu. Fusce pharetra nunc vel libero fermentum euismod. Maecenas condimentum, elit et venenatis suscipit, nisl tortor consequat neque, ac dapibus lacus ligula nec enim. Fusce ut metus a arcu commodo vulputate nec eu nunc. Nulla facilisi. Nunc rutrum lacinia rutrum. Duis rutrum nibh iaculis tellus bibendum nec volutpat quam volutpat. Curabitur feugiat lacinia urna, quis pellentesque neque mattis eget. Praesent ipsum eros, aliquam et elementum id, varius eu quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Quisque at nisl at eros luctus sollicitudin adipiscing et lorem. Vestibulum dui dolor, porta et lobortis id, hendrerit id nulla. Ut dapibus egestas nunc ac pulvinar. Vestibulum nisl diam, laoreet at condimentum et, faucibus et leo. Fusce sodales, lorem sit amet dictum consequat, eros velit laoreet nibh, ac porttitor tellus libero et eros. Integer varius, tortor vehicula aliquet luctus, tellus leo feugiat turpis, id dapibus lectus nibh quis arcu. Fusce pharetra nunc vel libero fermentum euismod. Maecenas condimentum, elit et venenatis suscipit, nisl tortor consequat neque, ac dapibus lacus ligula nec enim. Fusce ut metus a arcu commodo vulputate nec eu nunc. Nulla facilisi. Nunc rutrum lacinia rutrum. Duis rutrum nibh iaculis tellus bibendum nec volutpat quam volutpat. Curabitur feugiat lacinia urna, quis pellentesque neque mattis eget. Praesent ipsum eros, aliquam et elementum id, varius eu quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+</div>
 
 </body>
 </html>
