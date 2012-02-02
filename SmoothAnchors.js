@@ -25,11 +25,10 @@
 
 			// Change the hash first, then do the scrolling. This retains the standard functionality of the back/forward buttons.
 
-			var scrollmem = $('body').scrollTop();
+			var scrollmem = $(document).scrollTop();
 			window.location.hash = hash;
-			$('html,body').scrollTop(scrollmem);
-
-			$("html:not(:animated),body:not(:animated)").animate({scrollTop:destination}, 200);
+			$(document).scrollTop(scrollmem);
+			$("html,body").animate({scrollTop:destination}, 200);
 			
 		}
 
