@@ -10,4 +10,4 @@
 
 ## Demo
 
-Here's a demo of the plugin in action: <http://alextrob.github.com/SmoothAnchors/>
+Here's a demo of the plugin in action: <http://alextrob.github.io/SmoothAnchors/>
